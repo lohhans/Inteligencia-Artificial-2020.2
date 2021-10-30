@@ -1,4 +1,5 @@
 from owlready2 import *
+
 onto_path.append("1VA\Presença\9A")
 onto = get_ontology("http://www.lesfleursdunormal.fr/static/_downloads/pizza_onto.owl")
 onto.load()
@@ -17,6 +18,6 @@ test_pizza = onto.Pizza("test_pizza_owl_identifier")
 test_pizza.has_topping = [ onto.CheeseTopping(), onto.TomatoTopping(), onto.MeatTopping  () ]
 
 onto.save()
-nvp = NonVegetarianPizza()
 
-nvp.eat()
+print('\n\nClasses de ontologia das instâncias dado pela ontologia importada:\n')
+print(list(default_world.sparql("""SELECT * { ?x a owl:Class . FILTER(ISIRI(?x)) }""")))
