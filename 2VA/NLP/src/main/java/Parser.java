@@ -1,4 +1,5 @@
 import java.io.StringReader;
+import java.sql.SQLOutput;
 import java.util.List;
 
 import edu.stanford.nlp.ling.CoreLabel;
@@ -29,17 +30,98 @@ class Parser {
         return tokenizer.tokenize();
     }
 
+    public static String[] addX(int n, String arr[], String x)
+    {
+        int i;
+
+        // create a new array of size n+1
+        String newarr[] = new String[n + 1];
+
+        // insert the elements from
+        // the old array into the new array
+        // insert all elements till n
+        // then insert x at n+1
+        for (i = 0; i < n; i++)
+            newarr[i] = arr[i];
+
+        newarr[n] = x;
+
+        return newarr;
+    }
+
     public static void main(String[] args) {
-        String str = "Hi, my name is Armstrong.";
+
+
+        // EXERCÍCIO, dado uma gramática:
+        // frase => frase ⇒ sujeito predicado
+        // sujeito ⇒ artigo substantivo
+        // predicado ⇒ verbo artigo substantivo
+        // artigo ⇒ ex: "the"
+        // substantivo ⇒ ex: "cat" | "mouse"
+        // verbo ⇒ ex: "hunted"
+        // faça um programa que diga se uma frase dada faz parte dessa gramática.
+
+
+        String str = "the cat hunted the mouse";
         Parser parser = new Parser();
         Tree tree = parser.parse(str);
+
+        String[] tokens = {};
+        int tamanho;
 
         List<Tree> leaves = tree.getLeaves();
         // Print words and Pos Tags
         for (Tree leaf : leaves) {
             Tree parent = leaf.parent(tree);
-            System.out.print(leaf.label().value() + "-" + parent.label().value() + " ");
+            //System.out.println(parent.label().value());
+
+
+            if(parent.label().value().equals("DT")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Article");
+
+            }
+            if(parent.label().value().equals("NN")) {
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Noun");
+
+            }
+            if(parent.label().value().equals("VBD")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() +  " => Verb");
+            }
+            /*
+            switch(parent.label().value()) {
+                case "DT":
+                    tamanho = tokens.length;
+                    tokens = addX(tamanho, tokens, "Article");
+                    for (int i = 0; i < tamanho; i++){
+                        //System.out.println(tokens[i]);
+                    }
+                case "NN":
+                    tamanho = tokens.length;
+                    tokens = addX(tamanho, tokens, "Noun");
+                    for (int i = 0; i < tamanho; i++){
+                        //System.out.print(tokens[i]);
+                    }
+
+
+
+            }
+            */
+
+
+            //System.out.println(leaf.label().value() + "-" + parent.label().value() + " ");
+
         }
+        tamanho = tokens.length;
+        System.out.print("[");
+        for (int i = 0; i < tamanho; i++){
+            System.out.print(tokens[i]);
+            if(i < tamanho-1)
+            System.out.print(", ");
+        }
+        System.out.print("]");
         System.out.println();
     }
 }
