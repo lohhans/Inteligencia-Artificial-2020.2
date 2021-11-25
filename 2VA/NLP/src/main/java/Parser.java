@@ -52,15 +52,6 @@ class Parser {
     public static void main(String[] args) {
 
 
-        // EXERCÍCIO, dado uma gramática:
-        // frase => frase ⇒ sujeito predicado
-        // sujeito ⇒ artigo substantivo
-        // predicado ⇒ verbo artigo substantivo
-        // artigo ⇒ ex: "the"
-        // substantivo ⇒ ex: "cat" | "mouse"
-        // verbo ⇒ ex: "hunted"
-        // faça um programa que diga se uma frase dada faz parte dessa gramática.
-
 
         String str = "the cat hunted the mouse";
         Parser parser = new Parser();
@@ -73,8 +64,6 @@ class Parser {
         // Print words and Pos Tags
         for (Tree leaf : leaves) {
             Tree parent = leaf.parent(tree);
-            //System.out.println(parent.label().value());
-
 
             if(parent.label().value().equals("DT")){
                 tamanho = tokens.length;
@@ -90,28 +79,8 @@ class Parser {
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() +  " => Verb");
             }
-            /*
-            switch(parent.label().value()) {
-                case "DT":
-                    tamanho = tokens.length;
-                    tokens = addX(tamanho, tokens, "Article");
-                    for (int i = 0; i < tamanho; i++){
-                        //System.out.println(tokens[i]);
-                    }
-                case "NN":
-                    tamanho = tokens.length;
-                    tokens = addX(tamanho, tokens, "Noun");
-                    for (int i = 0; i < tamanho; i++){
-                        //System.out.print(tokens[i]);
-                    }
 
 
-
-            }
-            */
-
-
-            //System.out.println(leaf.label().value() + "-" + parent.label().value() + " ");
 
         }
         tamanho = tokens.length;
