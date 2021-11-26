@@ -34,13 +34,8 @@ class Parser {
     {
         int i;
 
-        // create a new array of size n+1
         String newarr[] = new String[n + 1];
 
-        // insert the elements from
-        // the old array into the new array
-        // insert all elements till n
-        // then insert x at n+1
         for (i = 0; i < n; i++)
             newarr[i] = arr[i];
 
@@ -53,7 +48,7 @@ class Parser {
 
 
 
-        String str = "the cat hunted the mouse";
+        String str = "the cat hunts the mouse";
         Parser parser = new Parser();
         Tree tree = parser.parse(str);
 
@@ -65,19 +60,148 @@ class Parser {
         for (Tree leaf : leaves) {
             Tree parent = leaf.parent(tree);
 
+            if(parent.label().value().equals("CC")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Conjunction");
+
+            }
+
+            if(parent.label().value().equals("CD")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Cardinal number");
+
+            }
+
             if(parent.label().value().equals("DT")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Article");
 
             }
-            if(parent.label().value().equals("NN")) {
+
+            if(parent.label().value().equals("EX")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Existential");
+
+            }
+
+            if(parent.label().value().equals("FW")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Foreign word");
+
+            }
+
+            if(parent.label().value().equals("IN")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Preposition");
+
+            }
+
+            if(parent.label().value().equals("JJ") || parent.label().value().equals("JJR") || parent.label().value().equals("JJS")) {
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Adjective");
+
+            }
+
+            if(parent.label().value().equals("LS")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => List marker");
+
+            }
+
+            if(parent.label().value().equals("MD")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Modal");
+
+            }
+
+            if(parent.label().value().equals("NN") || parent.label().value().equals("NNS")) {
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Noun");
 
             }
-            if(parent.label().value().equals("VBD")){
+
+            if(parent.label().value().equals("NNP") || parent.label().value().equals("NNPS")) {
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Proper Noun");
+
+            }
+
+            if(parent.label().value().equals("PDT")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Predeterminer");
+
+            }
+
+            if(parent.label().value().equals("POS")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Possessive ending");
+
+            }
+
+            if(parent.label().value().equals("PRP") || parent.label().value().equals("PRP$")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Pronoun");
+
+            }
+
+            if(parent.label().value().equals("RB") || parent.label().value().equals("RBR") || parent.label().value().equals("RBS")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Adverb");
+
+            }
+
+            if(parent.label().value().equals("RP")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Particle");
+
+            }
+
+            if(parent.label().value().equals("SYM")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Symbol");
+
+            }
+
+            if(parent.label().value().equals("TO")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => to");
+
+            }
+
+            if(parent.label().value().equals("UH")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Interjection");
+
+            }
+
+            if(parent.label().value().equals("VB") || parent.label().value().equals("VBD") || parent.label().value().equals("VBG") ||
+                    parent.label().value().equals("VBN") || parent.label().value().equals("VBP") || parent.label().value().equals("VBZ")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() +  " => Verb");
+            }
+
+            if(parent.label().value().equals("WDT")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Wh-article");
+
+            }
+
+            if(parent.label().value().equals("WP")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Wh-pronoum");
+
+            }
+
+            if(parent.label().value().equals("WP$")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Possessive wh-pronoum");
+
+            }
+
+            if(parent.label().value().equals("WRB")){
+                tamanho = tokens.length;
+                tokens = addX(tamanho, tokens, leaf.label().value() + " => Wh-adverb");
+
             }
 
 
@@ -92,8 +216,6 @@ class Parser {
         }
         System.out.print("]");
         System.out.println();
+
     }
 }
-
-// Siglas abaixo:
-//https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html
