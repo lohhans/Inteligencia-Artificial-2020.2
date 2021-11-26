@@ -1,6 +1,7 @@
 import java.io.StringReader;
 import java.sql.SQLOutput;
 import java.util.List;
+import java.util.Scanner;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.process.TokenizerFactory;
@@ -45,10 +46,13 @@ class Parser {
     }
 
     public static void main(String[] args) {
+        System.out.println("Digite uma frase em inglês abaixo para executar o Processamento de Linguagem Natural");
+        System.out.println();
 
+        System.out.print("Entrada: ");
+        Scanner entrada = new Scanner(System.in);
+        String str = entrada.nextLine();
 
-
-        String str = "the cat hunts the mouse";
         Parser parser = new Parser();
         Tree tree = parser.parse(str);
 
@@ -63,115 +67,96 @@ class Parser {
             if(parent.label().value().equals("CC")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Conjunction");
-
             }
 
             if(parent.label().value().equals("CD")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Cardinal number");
-
             }
 
             if(parent.label().value().equals("DT")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Article");
-
             }
 
             if(parent.label().value().equals("EX")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Existential");
-
             }
 
             if(parent.label().value().equals("FW")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Foreign word");
-
             }
 
             if(parent.label().value().equals("IN")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Preposition");
-
             }
 
             if(parent.label().value().equals("JJ") || parent.label().value().equals("JJR") || parent.label().value().equals("JJS")) {
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Adjective");
-
             }
 
             if(parent.label().value().equals("LS")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => List marker");
-
             }
 
             if(parent.label().value().equals("MD")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Modal");
-
             }
 
             if(parent.label().value().equals("NN") || parent.label().value().equals("NNS")) {
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Noun");
-
             }
 
             if(parent.label().value().equals("NNP") || parent.label().value().equals("NNPS")) {
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Proper Noun");
-
             }
 
             if(parent.label().value().equals("PDT")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Predeterminer");
-
             }
 
             if(parent.label().value().equals("POS")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Possessive ending");
-
             }
 
             if(parent.label().value().equals("PRP") || parent.label().value().equals("PRP$")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Pronoun");
-
             }
 
             if(parent.label().value().equals("RB") || parent.label().value().equals("RBR") || parent.label().value().equals("RBS")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Adverb");
-
             }
 
             if(parent.label().value().equals("RP")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Particle");
-
             }
 
             if(parent.label().value().equals("SYM")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Symbol");
-
             }
 
             if(parent.label().value().equals("TO")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => to");
-
             }
 
             if(parent.label().value().equals("UH")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Interjection");
-
             }
 
             if(parent.label().value().equals("VB") || parent.label().value().equals("VBD") || parent.label().value().equals("VBG") ||
@@ -183,39 +168,41 @@ class Parser {
             if(parent.label().value().equals("WDT")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Wh-article");
-
             }
 
             if(parent.label().value().equals("WP")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Wh-pronoum");
-
             }
 
             if(parent.label().value().equals("WP$")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Possessive wh-pronoum");
-
             }
 
             if(parent.label().value().equals("WRB")){
                 tamanho = tokens.length;
                 tokens = addX(tamanho, tokens, leaf.label().value() + " => Wh-adverb");
-
             }
-
-
-
         }
+
         tamanho = tokens.length;
-        System.out.print("[");
+
+        System.out.println();
+        System.out.print("Saída: [");
+
         for (int i = 0; i < tamanho; i++){
             System.out.print(tokens[i]);
             if(i < tamanho-1)
             System.out.print(", ");
         }
-        System.out.print("]");
+
+        System.out.print("]\n");
         System.out.println();
+
+        System.out.print("⇾ INTELIGÊNCIA ARTIFICIAL - 2020.2 - FEITO POR: ARMSTRONG, DAVID E ISAAC ⇽");
+        System.out.println();
+
 
     }
 }
