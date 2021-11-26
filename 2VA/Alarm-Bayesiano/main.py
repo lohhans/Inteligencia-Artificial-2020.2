@@ -1,10 +1,10 @@
-from pgmpy.models import BayesianNetwork
+from pgmpy.models import BayesianModel
 from pgmpy.inference import VariableElimination
 
 # Press the green button in the gutter to run the script.
 
 if __name__ == '__main__':
-    alarm_model = BayesianNetwork([('Burglary', 'Alarm'),
+    alarm_model = BayesianModel([('Burglary', 'Alarm'),
                                  ('Earthquake', 'Alarm'),
                                  ('Alarm', 'JohnCalls'),
                                  ('Alarm', 'MaryCalls')])
