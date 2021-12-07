@@ -131,33 +131,35 @@ public class Main {
             // Auxiliares:
             // Acentos
             ArrayList<String> acentos = new ArrayList<>(Arrays.asList("à", "è", "ì", "ò", "ù", "À", "È", "Ì", "Ò", "Ù", "á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú", "â", "ê", "î", "ô", "û", "Â", "Ê", "Î", "Ô", "Û", "ã", "õ"));
-            ArrayList<String> vogaisFemMasc = new ArrayList<>(Arrays.asList("a", "á", "à", "ã", "â", "o", "ó", "õ", "ô", "ò"));
+            ArrayList<String> vogaisFemMasc = new ArrayList<>(Arrays.asList("a", "á", "à", "ã", "â", "o", "ó", "õ", "ô", "ò", "i"));
             ArrayList<String> vogais = new ArrayList<>(Arrays.asList("a", "e", "i", "o", "u"));
 
 
             for (String palavra : saida2) {
-//                char[] duasUltimasLetrasDaPalavra = saida2.get(i).substring(saida2.get(i).length()-2).toCharArray();
+                char[] duasUltimasLetrasDaPalavra = palavra.substring(palavra.length()-2).toCharArray();
                 String ultimaLetraDaPalavra = palavra.substring(palavra.length() - 1);
                 String palavraSemUltimaLetra = palavra.substring(0, palavra.length()-1);
 //                System.out.println(generoDaPalavra);
 //                System.out.println(palavra);
 
                 if (!acentos.contains(ultimaLetraDaPalavra) && !ultimaLetraDaPalavra.equals("s") && !ultimaLetraDaPalavra.equals("z")) {
-//                    System.out.println(palavra);
+                    // System.out.println(palavra);
                     // Pela regra, tanto faz "inha" ou "zinha", aqui, utilizei o zinha.
                     // System.out.println(saida2.get(i).substring(0, saida2.get(i).length()-1));
                     if(vogaisFemMasc.contains(ultimaLetraDaPalavra)){
-                        if (vogaisFemMasc.contains(ultimaLetraDaPalavra)) {
-//                        System.out.println(saida2.get(i) + "zinh" + ultimaLetraDaPalavra);
-                            saida3.add(palavraSemUltimaLetra + "inh" + ultimaLetraDaPalavra);
+                        if(duasUltimasLetrasDaPalavra[0] == 'a' || duasUltimasLetrasDaPalavra[0] == 'ã'){
+                            saida3.add(palavra + "zinh" + "o");
+                        } else if(duasUltimasLetrasDaPalavra[0] == 'o' || duasUltimasLetrasDaPalavra[0] == 'õ'){
+                            saida3.add(palavra + "zinh" + "a");
+                        } else if(duasUltimasLetrasDaPalavra[0] == 'i'){
+                            saida3.add(palavra + "zinh" + "o");
                         } else {
                             String generoDaPalavra = Crawler.main(palavra.toLowerCase());
 
                             if (generoDaPalavra.equalsIgnoreCase("feminino")) {
-//                            System.out.println(saida2.get(i) + "zinh" + "a");
-                                saida3.add(palavraSemUltimaLetra + "zinh" + "a");
+                                saida3.add(palavraSemUltimaLetra + "inh" + "a");
                             } else {
-                                saida3.add(palavraSemUltimaLetra + "zinh" + "o");
+                                saida3.add(palavraSemUltimaLetra + "inh" + "o");
 
                             }
                         }

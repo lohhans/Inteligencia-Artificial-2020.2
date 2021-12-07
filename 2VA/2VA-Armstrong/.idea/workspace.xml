@@ -4,97 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e979684b-b277-4722-b2d1-cda87f101991" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_14_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2VA-Armstrong.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dicionarios/pt-br-lemmatizer.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrada.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grizzly-framework-2.4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grizzly-http-2.4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/grizzly-http-server-2.4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hppc-0.7.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-core-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-module-jaxb-annotations-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.annotation-api-1.3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.inject-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.validation-api-2.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.ws.rs-api-2.1.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jcommander-1.78.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-client-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-common-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-container-grizzly2-http-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-entity-filtering-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-media-jaxb-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-media-json-jackson-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jersey-server-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/morfologik-fsa-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/morfologik-fsa-builders-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/morfologik-stemming-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/morfologik-tools-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opennlp-brat-annotator-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opennlp-morfologik-addon-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opennlp-tools-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opennlp-uima-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/osgi-resource-locator-1.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pt-pos-maxent.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/Crawler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokens/pt-token.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/2VA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/dicionarios/pt-br-lemmatizer.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/entrada.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/grizzly-framework-2.4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/grizzly-http-2.4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/grizzly-http-server-2.4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/hppc-0.7.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jackson-annotations-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jackson-core-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jackson-databind-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jackson-module-jaxb-annotations-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jakarta.activation-api-1.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jakarta.annotation-api-1.3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jakarta.inject-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jakarta.validation-api-2.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jakarta.ws.rs-api-2.1.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jakarta.xml.bind-api-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jcommander-1.78.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-client-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-common-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-container-grizzly2-http-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-entity-filtering-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-media-jaxb-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-media-json-jackson-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/jersey-server-2.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/morfologik-fsa-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/morfologik-fsa-builders-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/morfologik-stemming-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/morfologik-tools-2.1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/opennlp-brat-annotator-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/opennlp-morfologik-addon-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/opennlp-tools-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/opennlp-uima-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/lib/osgi-resource-locator-1.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/models/pt-pos-maxent.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/src/com/armstrong/Crawler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/src/com/armstrong/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2VA/tokens/pt-token.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NLP/target/classes/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../NLP/target/classes/Parser.class" afterDir="false" />
+    <list default="true" id="e979684b-b277-4722-b2d1-cda87f101991" name="Changes" comment="Código melhorado">
+      <change beforePath="$PROJECT_DIR$/../2VA-Armstrong-finalizado.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dicionarios/pt-br-lemmatizer.dict" beforeDir="false" afterPath="$PROJECT_DIR$/dicionarios/pt-br-lemmatizer.dict" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entrada.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/armstrong/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/Crawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/armstrong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/armstrong/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/armstrong/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +20,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="21nhsLVDd5XoVLoIH43ynw9vHMj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -170,7 +95,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/2VA-Armstrong" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -207,6 +132,14 @@
       <option name="presentableId" value="Default" />
       <updated>1638582967477</updated>
     </task>
+    <task id="LOCAL-00001" summary="2VA">
+      <created>1638592665195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638592665195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,5 +153,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2VA" />
+    <MESSAGE value="Código melhorado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Código melhorado" />
   </component>
 </project>
