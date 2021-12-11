@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e979684b-b277-4722-b2d1-cda87f101991" name="Changes" comment="Código melhorado">
-      <change beforePath="$PROJECT_DIR$/../2VA-Armstrong-finalizado.rar" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/CrawlerSubstantivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dicionarios/pt-br-lemmatizer.dict" beforeDir="false" afterPath="$PROJECT_DIR$/dicionarios/pt-br-lemmatizer.dict" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entrada.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/armstrong/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/Crawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/armstrong/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/CrawlerGenero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/armstrong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/armstrong/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/armstrong/Crawler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/armstrong/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/armstrong/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +95,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/2VA-Armstrong" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../1VA/1VA/segundo-armstrong" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -104,6 +104,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lohan\Projetos\UFAPE\Inteligencia-Artificial-2020.2\2VA\2VA-Armstrong" />
       <recent name="C:\Users\lohan\Projetos\UFAPE\Inteligencia-Artificial-2020.2\2VA\2VA-Armstrong\src\com\armstrong" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.armstrong" />
     </key>
   </component>
   <component name="RunManager">
@@ -139,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638592665195</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Código melhorado">
+      <created>1638848039530</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638848039530</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

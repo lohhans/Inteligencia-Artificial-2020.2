@@ -7,10 +7,12 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class Crawler {
-    public static String main(String palavra) {
+public class CrawlerSubstantivo {
+    public static boolean main(String palavra) {
 
         Document document;
+        boolean ehSubstativo = false;
+
         try {
             document = Jsoup.connect("https://pt.wiktionary.org/wiki/"+palavra)
                     .userAgent("Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0")
@@ -19,27 +21,26 @@ public class Crawler {
                     .ignoreHttpErrors(true).get();
 
 
-            Elements generos = document.select("div.vector-body > div.mw-body-content > div.mw-parser-output > p > i");
-            Element genero = null;
+            Elements substantivos = document.select("div.vector-body > div.mw-body-content > div.mw-parser-output > h2 > span");
+            Element substantivo = substantivos.first();
 
-            for (Element gen : generos) {
-                String replace = gen.toString().replace("<i>", "").replace("</i>", "");
-                if(replace.equalsIgnoreCase("feminino") || replace.equalsIgnoreCase("masculino") || replace.equalsIgnoreCase("comum aos dois géneros")){
-                    genero = gen;
+            /*for (Element sub : substantivos) {
+                if(sub.toString().contains("Substantivo")){
+                    substantivo = sub;
                     break;
                 }
-            }
+            }*/
 
-            assert genero != null;
-            return (genero.toString().replace("<i>", "").replace("</i>", ""));
+            assert substantivo != null;
+            ehSubstativo = substantivo.toString().contains("Substantivo");
 
         } catch (IOException e) {
             System.err.println(e.getMessage());
         } catch (NullPointerException e){
-            return "masculino";
+            return false;
         }
 
-        return palavra;
+        return ehSubstativo;
     }
 
 }

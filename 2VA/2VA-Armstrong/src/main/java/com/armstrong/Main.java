@@ -16,12 +16,15 @@ import java.io.File;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
         try {
+
+            boolean ehSubstativo = CrawlerSubstantivo.main("ruins");
+            System.out.println(ehSubstativo);
+
             // Leitura do arquivo com entrada de texto
             InputStream modelIn;
 
@@ -51,6 +54,8 @@ public class Main {
             POSTaggerME posTagger = new POSTaggerME(posModel);
             String[] tags = posTagger.tag(tokens);
 
+            System.out.println(Arrays.toString(tags));
+
 
             // Lemmatização do texto processado
             InputStream dictLemmatizer = new FileInputStream("dicionarios" + File.separator + "pt-br-lemmatizer.dict");
@@ -60,6 +65,8 @@ public class Main {
 
                 for (int tam = 0; tam < tokens.length; tam++) {
                     String token = tokens[tam];
+                    System.out.println(token + " EH SUBSTANTIVO? -> " + CrawlerSubstantivo.main(token));
+
                     int tamanhoEleToken = token.length();
                     if (token.charAt(tamanhoEleToken - 1) == 's' && !tags[tam].equals("prop") && !tags[tam].equals("pron-det")) {
                         tags[tam] = "N";
@@ -72,10 +79,17 @@ public class Main {
                     }
                     if (tags[tam].equals("v-fin") && token.charAt(tamanhoEleToken - 1) == 's') {
                         tags[tam] = "V";
+                    } if (CrawlerSubstantivo.main(token.toLowerCase())) {
+//                        System.out.println("entrou");
+//                        System.out.println(tags[tam]);
+                        tags[tam] = "N";
                     }
                 }
             }
             String[] lemmas = lemmatizer.lemmatize(tokens, tags);
+
+            System.out.println(Arrays.toString(tokens));
+            System.out.println(Arrays.toString(lemmas));
 
 
             // Tratamento das saídas obtidas para a Saída 1 e Saída 2
@@ -154,7 +168,7 @@ public class Main {
                         } else if(duasUltimasLetrasDaPalavra[0] == 'i'){
                             saida3.add(palavra + "zinh" + "o");
                         } else {
-                            String generoDaPalavra = Crawler.main(palavra.toLowerCase());
+                            String generoDaPalavra = CrawlerGenero.main(palavra.toLowerCase());
 
                             if (generoDaPalavra.equalsIgnoreCase("feminino")) {
                                 saida3.add(palavraSemUltimaLetra + "inh" + "a");
@@ -165,7 +179,7 @@ public class Main {
                         }
                     } else {
                         if(ultimaLetraDaPalavra.equalsIgnoreCase("m")){
-                            String generoDaPalavra = Crawler.main(palavra.toLowerCase());
+                            String generoDaPalavra = CrawlerGenero.main(palavra.toLowerCase());
 
                             if (generoDaPalavra.equalsIgnoreCase("feminino")) {
 //                            System.out.println(saida2.get(i) + "zinh" + "a");
@@ -175,7 +189,7 @@ public class Main {
 
                             }
                         } else {
-                            String generoDaPalavra = Crawler.main(palavra.toLowerCase());
+                            String generoDaPalavra = CrawlerGenero.main(palavra.toLowerCase());
 
                             if (generoDaPalavra.equalsIgnoreCase("feminino")) {
 //                            System.out.println(saida2.get(i) + "zinh" + "a");
@@ -188,7 +202,7 @@ public class Main {
                     }
 //                    saida3.add(saida2.get(i));
                 } else {
-                    String generoDaPalavra = Crawler.main(palavra.toLowerCase());
+                    String generoDaPalavra = CrawlerGenero.main(palavra.toLowerCase());
 
                     if(ultimaLetraDaPalavra.equalsIgnoreCase("z")){
                         if (generoDaPalavra.equalsIgnoreCase("feminino")) {
